@@ -1,0 +1,18 @@
+:root {
+  // colors
+  --vitron-primary: rgba(255, 255, 255, 0.15);
+  --vitron-border: rgba(255, 255, 255, 0.3);
+  --vitron-text: #ffffff;
+
+  --vitron-blur: 10px;
+  --vitron-border-radius: 12px;
+}
+
+.vitron-glass {
+  backdrop-filter: blur(var(--vitron-blur));
+  background-color: var(--vitron-primary);
+  border: 1px solid var(--vitron-border);
+  border-radius: var(--vitron-border-radius);
+  color: var(--vitron-text);
+  padding: 1rem;
+}
