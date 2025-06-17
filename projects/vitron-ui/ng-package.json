@@ -3,5 +3,12 @@
   "dest": "../../dist/vitron-ui",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": [
+    {
+      "glob": "theme.scss",
+      "input": "src/lib",
+      "output": "./"
+    }
+  ]
 }

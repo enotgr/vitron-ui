@@ -1,18 +1,123 @@
 :root {
-  // colors
-  --vitron-primary: rgba(255, 255, 255, 0.15);
-  --vitron-border: rgba(255, 255, 255, 0.3);
-  --vitron-text: #ffffff;
+  /* Colors */
+  --vitron-overlay-color: #ffffff3d;
+  --vitron-highlight: #ffffffb8;
 
-  --vitron-blur: 10px;
+  // text colors
+  --vitron-text-primary: #ffffff;
+  --vitron-text-secondary: #b0b0b0;
+
+  --vitron-blur: 2px;
   --vitron-border-radius: 12px;
+
+  // offsets
+  --vitron-offset-xs-s: 4px;
+  --vitron-offset-xs: 8px;
+  --vitron-offset-xs-l: 12px;
+  --vitron-offset-sm-s: 16px;
+  --vitron-offset-sm: 20px;
+  --vitron-offset-sm-l: 24px;
+  --vitron-offset-md-s: 28px;
+  --vitron-offset-md: 32px;
+  --vitron-offset-md-l: 36px;
+  --vitron-offset-lg-s: 40px;
+  --vitron-offset-lg: 44px;
+  --vitron-offset-lg-l: 48px;
+  --vitron-offset-xl-s: 52px;
+  --vitron-offset-xl: 56px;
+  --vitron-offset-xl-l: 60px;
 }
 
+/* Dark mode styles */
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --vitron-overlay-color: #0000003d;
+//     --vitron-highlight: #ffffff26;
+//   }
+// }
+
+.vui-dark {
+  --vitron-overlay-color: #0000003d;
+  --vitron-highlight: #ffffff26;
+}
+
+/* Helpers */
 .vitron-glass {
+  color: var(--vitron-text-primary);
+  position: relative;
+  border: none;
+  overflow: hidden;
+  background: transparent;
+  outline: none;
+}
+
+.vitron-glass-filter,
+.vitron-glass-overlay,
+.vitron-glass-specular {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.vitron-glass-filter {
+  z-index: 1;
   backdrop-filter: blur(var(--vitron-blur));
-  background-color: var(--vitron-primary);
-  border: 1px solid var(--vitron-border);
-  border-radius: var(--vitron-border-radius);
-  color: var(--vitron-text);
-  padding: 1rem;
+  filter: url(#glass-distortion) saturate(120%) brightness(1.03);
+}
+
+.vitron-glass-overlay {
+  z-index: 2;
+  background: var(--vitron-overlay-color);
+}
+
+.vitron-glass-specular {
+  z-index: 3;
+  box-shadow: inset 1px 1px 1px var(--vitron-highlight);
+}
+
+.vitron-glass-content {
+  position: relative;
+  z-index: 4;
+  color: var(--vitron-text-primary);
+  font-weight: 500;
+}
+
+.vitron-full-w {
+  width: 100%;
+}
+
+.vitron-full-h {
+  height: 100%;
+}
+
+.vitron-full {
+  width: 100%;
+  height: 100%;
+}
+
+.vitron-flex {
+  display: flex;
+}
+
+.vitron-flex-col {
+  flex-direction: column;
+}
+
+.vitron-flex-row {
+  flex-direction: row;
+}
+
+.vitron-flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.vitron-flex-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vitron-flex-around {
+  justify-content: space-around;
+  align-items: center;
 }

@@ -1,6 +1,6 @@
 {
-  "name": "@vitron/ui",
-  "version": "0.0.1",
+  "name": "@enotgr/vitron-ui",
+  "version": "0.0.29",
   "description": "Vitron UI — modern glassy Angular 20 component library",
   "author": {
     "name": "Mikhail Krotov",
@@ -32,6 +32,9 @@
     "fesm2022/",
     "esm2022/",
     "package.json",
-    "README.md"
-  ]
+    "README.md",
+    "index.d.ts",
+    "theme.scss"
+  ],
+  "types": "index.d.ts"
 }

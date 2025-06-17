@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-vitron-ui',
-  imports: [],
+  selector: 'vitron-ui',
   template: `
     <p>
       vitron-ui works!
     </p>
   `,
-  styles: ``
+  styles: ``,
+  standalone: true,
 })
 export class VitronUi {
 

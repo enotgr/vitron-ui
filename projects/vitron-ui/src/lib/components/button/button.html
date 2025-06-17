@@ -1,0 +1,13 @@
+<button
+  class="vitron-glass vitron-button"
+  [class]="[colorClass, sizeClass]"
+  [class.vitron-full-w]="wide()"
+  [disabled]="disabled()"
+>
+  <div class="vitron-glass-filter"></div>
+  <div class="vitron-glass-overlay"></div>
+  <div class="vitron-glass-specular"></div>
+  <div class="vitron-glass-content">
+    <ng-content></ng-content>
+  </div>
+</button>
