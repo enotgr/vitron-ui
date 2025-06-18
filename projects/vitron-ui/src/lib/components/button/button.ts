@@ -1,22 +1,23 @@
 import { Component, input } from '@angular/core';
-import { NgClass } from '@angular/common';
 
 import { Size } from '../../models';
+import { VuiGlassContentWrapper } from '../glass-content-wrapper';
 
 @Component({
   selector: 'vui-button',
   templateUrl: './button.html',
   styleUrl: './button.scss',
   standalone: true,
+  imports: [VuiGlassContentWrapper],
 })
 export class VuiButton {
   readonly size = input<Size>('md');
-  readonly color = input<string>('primary');
+  readonly textColor = input<string>('primary');
   readonly disabled = input<boolean>(false);
   readonly wide = input<boolean>(false);
 
-  get colorClass(): string {
-    return this.color() ? `vui-button-color--${this.color()}` : '';
+  get textColorClass(): string {
+    return this.textColor() ? `vui-button-color--${this.textColor()}` : '';
   }
 
   get sizeClass(): string {

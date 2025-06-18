@@ -3,5 +3,7 @@
  */
 
 // components
+export { VuiGlassFilter } from './lib/components/glass-filter';
+
 export { VuiButton } from './lib/components/button';
-export { VitronFilter } from './lib/components/vitron-filter';
+export { VuiCard } from './lib/components/card';

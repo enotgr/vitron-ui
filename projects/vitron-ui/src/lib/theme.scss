@@ -28,14 +28,6 @@
   --vitron-offset-xl-l: 60px;
 }
 
-/* Dark mode styles */
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --vitron-overlay-color: #0000003d;
-//     --vitron-highlight: #ffffff26;
-//   }
-// }
-
 .vui-dark {
   --vitron-overlay-color: #0000003d;
   --vitron-highlight: #ffffff26;
@@ -49,37 +41,6 @@
   overflow: hidden;
   background: transparent;
   outline: none;
-}
-
-.vitron-glass-filter,
-.vitron-glass-overlay,
-.vitron-glass-specular {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-}
-
-.vitron-glass-filter {
-  z-index: 1;
-  backdrop-filter: blur(var(--vitron-blur));
-  filter: url(#glass-distortion) saturate(120%) brightness(1.03);
-}
-
-.vitron-glass-overlay {
-  z-index: 2;
-  background: var(--vitron-overlay-color);
-}
-
-.vitron-glass-specular {
-  z-index: 3;
-  box-shadow: inset 1px 1px 1px var(--vitron-highlight);
-}
-
-.vitron-glass-content {
-  position: relative;
-  z-index: 4;
-  color: var(--vitron-text-primary);
-  font-weight: 500;
 }
 
 .vitron-full-w {
