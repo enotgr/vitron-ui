@@ -1,0 +1,46 @@
+:host {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: var(--vitron-full-w);
+  border-radius: var(--vitron-border-radius);
+}
+
+.vui-input-wrapper {
+  display: block;
+  width: auto;
+  max-width: var(--vitron-full-w);
+  box-sizing: border-box;
+
+  position: relative;
+  font-family: inherit;
+  border-radius: var(--vitron-border-radius);
+
+  label {
+    position: absolute;
+    left: var(--vitron-offset-sm-s);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s ease all;
+    color: var(--vitron-text-secondary);
+    font-size: var(--vitron-font-size-md);
+    pointer-events: none;
+  }
+
+  input {
+    display: inline-block;
+    width: var(--vitron-full-w);
+    box-sizing: border-box;
+    padding: var(--vitron-offset-sm-s);
+    border: none;
+    font-size: var(--vitron-font-size-md);
+    outline: none;
+    background-color: #ffffff00;
+    color: var(--vitron-text-primary);
+  }
+
+  &.focused label,
+  &:has(input:not(:placeholder-shown)) label {
+    top: 0;
+    font-size: var(--vitron-font-size-sm);
+  }
+}

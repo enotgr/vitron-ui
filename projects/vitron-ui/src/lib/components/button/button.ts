@@ -13,6 +13,7 @@ import { VuiGlassContentWrapper } from '../glass-content-wrapper';
 export class VuiButton {
   readonly size = input<Size>('md');
   readonly textColor = input<string>('primary');
+  readonly type = input<string>('button');
   readonly disabled = input<boolean>(false);
   readonly wide = input<boolean>(false);
 

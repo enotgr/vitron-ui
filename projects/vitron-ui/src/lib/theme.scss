@@ -5,7 +5,7 @@
 
   // text colors
   --vitron-text-primary: #ffffff;
-  --vitron-text-secondary: #b0b0b0;
+  --vitron-text-secondary: #979797;
 
   --vitron-blur: 2px;
   --vitron-border-radius: 12px;
@@ -26,6 +26,20 @@
   --vitron-offset-xl-s: 52px;
   --vitron-offset-xl: 56px;
   --vitron-offset-xl-l: 60px;
+
+  // widths
+  --vitron-full-w: 100%;
+
+  // heights
+  --vitron-full-h: 100%;
+
+  // fonts sizes
+  --vitron-font-size-xs: 10px;
+  --vitron-font-size-sm: 12px;
+  --vitron-font-size-md: 14px;
+  --vitron-font-size-lg: 16px;
+  --vitron-font-size-xl: 18px;
+  --vitron-font-size-2xl: 20px;
 }
 
 .vui-dark {
@@ -44,16 +58,16 @@
 }
 
 .vitron-full-w {
-  width: 100%;
+  width: var(--vitron-full-w);
 }
 
 .vitron-full-h {
-  height: 100%;
+  height: var(--vitron-full-h);
 }
 
 .vitron-full {
-  width: 100%;
-  height: 100%;
+  width: var(--vitron-full-w);
+  height: var(--vitron-full-h);
 }
 
 .vitron-flex {

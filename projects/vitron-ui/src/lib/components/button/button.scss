@@ -6,17 +6,17 @@
 
   &.vui-button-size--xs {
     padding: var(--vitron-offset-xs-s) var(--vitron-offset-xs);
-    font-size: 12px;
+    font-size: 10px;
   }
 
   &.vui-button-size--sm {
     padding: var(--vitron-offset-xs) var(--vitron-offset-xs-l);
-    font-size: 14px;
+    font-size: 12px;
   }
 
   &.vui-button-size--md {
     padding: var(--vitron-offset-xs-l) var(--vitron-offset-sm-l);
-    font-size: 16px;
+    font-size: 14px;
   }
 
   &.vui-button-size--lg {
@@ -26,12 +26,12 @@
 
   &.vui-button-size--xl {
     padding: var(--vitron-offset-sm) var(--vitron-offset-md-l);
-    font-size: 16px;
+    font-size: 18px;
   }
 
   &.vui-button-size--2xl {
     padding: var(--vitron-offset-sm-l) var(--vitron-offset-lg);
-    font-size: 18px;
+    font-size: 20px;
   }
 
   &.vui-button-color--primary {
@@ -44,11 +44,11 @@
 
   &:not(:disabled) {
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
     &:active {
-      transform: scale(0.95);
+      transform: scale(0.97);
     }
   }
 
