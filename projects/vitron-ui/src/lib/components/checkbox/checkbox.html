@@ -1,0 +1,17 @@
+<div class="vui-checkbox">
+  <input
+    [id]="id()"
+    type="checkbox"
+    [checked]="checked()"
+    [disabled]="disabled()"
+    (change)="toggle()"
+  />
+  <label [for]="id()">
+    <svg viewBox="0,0,50,50">
+      <path d="M5 30 L 20 45 L 45 5"></path>
+    </svg>
+  </label>
+  @if (label()) {
+    <span class="label">{{ label() }}</span>
+  }
+</div>

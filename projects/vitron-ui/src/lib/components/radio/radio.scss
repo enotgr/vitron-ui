@@ -1,0 +1,51 @@
+.vui-radio {
+  display: flex;
+  align-items: center;
+
+  input[type="radio"] {
+    appearance: none;
+    background-origin: border-box;
+    border: var(--vitron-border-width) solid var(--vitron-white);
+    display: inline-block;
+    flex-shrink: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    border-radius: var(--vitron-border-full-radius);
+    user-select: none;
+    vertical-align: middle;
+    height: var(--vitron-height-sm);
+    width: var(--vitron-width-sm);
+    background-color: var(--vitron-non-glass-bg);
+    color: var(--vitron-accent);
+    margin: 0;
+    cursor: pointer;
+
+    &:focus {
+      outline: var(--vitron-border-width) solid transparent;
+      outline-offset: 2px;
+    }
+
+    &:checked {
+      background-color: currentcolor;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E");
+      background-position: 50% center;
+      background-repeat: no-repeat;
+      background-size: initial;
+      border-color: transparent;
+    }
+
+    &:disabled {
+      border-color: var(--vitron-text-secondary);
+      cursor: default;
+
+      ~ label {
+        color: var(--vitron-text-secondary);
+      }
+    }
+  }
+
+  label {
+    padding-inline-start: var(--vitron-offset-xs);
+  }
+}

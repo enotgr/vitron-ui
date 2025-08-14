@@ -2,6 +2,9 @@
   /* Colors */
   --vitron-overlay-color: #ffffff3d;
   --vitron-highlight: #ffffffb8;
+  --vitron-non-glass-bg: #ffffff00;
+  --vitron-white: #ffffff;
+  --vitron-accent: #1c64f2;
 
   /* text colors */
   --vitron-text-primary: #ffffff;
@@ -9,6 +12,7 @@
 
   --vitron-blur: 2px;
   --vitron-border-radius: 12px;
+  --vitron-border-full-radius: 100%;
 
   /* offsets */
   --vitron-offset-xs-s: 4px;
@@ -28,9 +32,11 @@
   --vitron-offset-xl-l: 60px;
 
   /* widths */
+  --vitron-width-sm: 20px;
   --vitron-full-w: 100%;
 
   /* heights */
+  --vitron-height-sm: 20px;
   --vitron-full-h: 100%;
 
   /* fonts sizes */
@@ -40,11 +46,15 @@
   --vitron-font-size-lg: 16px;
   --vitron-font-size-xl: 18px;
   --vitron-font-size-2xl: 20px;
+
+  /* border width */
+  --vitron-border-width: 2px;
 }
 
 .vui-dark {
   --vitron-overlay-color: #0000003d;
   --vitron-highlight: #ffffff26;
+  --vitron-non-glass-bg: #1c1c1cb3;
 }
 
 /* Helpers */

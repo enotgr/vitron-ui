@@ -1,0 +1,1 @@
+export { VuiCheckbox } from './checkbox';

@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 import { Size } from '../../models';
 import { VuiGlassContentWrapper } from '../glass-content-wrapper';
@@ -9,6 +9,7 @@ import { VuiGlassContentWrapper } from '../glass-content-wrapper';
   styleUrl: './button.scss',
   standalone: true,
   imports: [VuiGlassContentWrapper],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class VuiButton {
   readonly size = input<Size>('md');
@@ -16,6 +17,7 @@ export class VuiButton {
   readonly type = input<string>('button');
   readonly disabled = input<boolean>(false);
   readonly wide = input<boolean>(false);
+  readonly liquid = input<boolean>(true);
 
   get textColorClass(): string {
     return this.textColor() ? `vui-button-color--${this.textColor()}` : '';

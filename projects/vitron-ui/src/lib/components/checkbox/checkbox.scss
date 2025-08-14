@@ -1,0 +1,81 @@
+.vui-checkbox {
+  display: inline-flex;
+  align-items: center;
+
+  .label {
+    margin-left: var(--vitron-offset-xs);
+  }
+
+  *, *:after, *:before {
+    box-sizing: border-box;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+
+    &:checked + label svg path {
+      stroke-dashoffset: 0;
+    }
+
+    &:focus + label {
+      transform: scale(1.03);
+    }
+  }
+
+  input + label {
+    display: block;
+    border: var(--vitron-border-width) solid var(--vitron-text-primary);
+    height: var(--vitron-height-sm);
+    width: var(--vitron-width-sm);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:active {
+      transform: scale(1.05);
+      border-radius: var(--vitron-border-radius);
+    }
+
+    svg {
+      pointer-events: none;
+      padding: 5%;
+
+      path {
+        fill: none;
+        stroke: var(--vitron-text-primary);
+        stroke-width: 8px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 100;
+        stroke-dashoffset: 101;
+        transition: all 250ms cubic-bezier(1,0,.37,.91);
+      }
+    }
+  }
+
+  input:disabled + label,
+  input:disabled ~ .label {
+    color: var(--vitron-text-secondary);
+    border-color: var(--vitron-text-secondary);
+    cursor: default;
+
+    transition: none;
+    transform: none;
+
+    &:active {
+      transform: none;
+      border-radius: 6px;
+    }
+
+    svg path {
+      stroke: var(--vitron-text-secondary);
+      transition: none;
+      stroke-dashoffset: 101;
+    }
+  }
+}

@@ -1,7 +1,16 @@
-import { Component, ElementRef, forwardRef, input, output, viewChild } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  forwardRef,
+  input,
+  output,
+  viewChild,
+} from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { VuiGlassContentWrapper } from '../glass-content-wrapper';
+import { generateElementId } from '../../utils';
 
 @Component({
   selector: 'vui-input',
@@ -15,17 +24,19 @@ import { VuiGlassContentWrapper } from '../glass-content-wrapper';
       useExisting: forwardRef(() => VuiInput),
       multi: true
     }
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class VuiInput implements ControlValueAccessor {
   private readonly inputRef = viewChild<ElementRef<HTMLInputElement>>('input');
 
   // readonly value = input<string>('');
   // TODO: Move id generation to utils
-  readonly id = input<string>(`vui-input-${Math.random().toString(36).substring(2, 10)}`);
+  readonly id = input<string>(generateElementId('vui-input'));
   readonly name = input<string>('');
   readonly label = input<string>('');
   readonly placeholder = input<string>('');
+  // TODO: check all types and create InputType type
   readonly type = input<string>('text');
   readonly disabled = input<boolean>(false);
   readonly readonly = input<boolean>(false);
@@ -34,6 +45,7 @@ export class VuiInput implements ControlValueAccessor {
   readonly required = input<boolean>(false);
   readonly autofocus = input<boolean>(false);
   readonly autocomplete = input<string>('off');
+  // TODO: mask
   // readonly mask = input<MaskOptions>(false);
 
   readonly input = output<Event>();

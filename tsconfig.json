@@ -16,7 +16,7 @@
     "module": "preserve",
     "paths": {
       "vitron-ui": [
-        "./dist/vitron-ui"
+        "./projects/vitron-ui/src/public-api.ts"
       ]
     }
   },
@@ -34,6 +34,12 @@
     },
     {
       "path": "./projects/vitron-ui/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sandbox/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/sandbox/tsconfig.spec.json"
     }
   ]
 }

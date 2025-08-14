@@ -1,0 +1,15 @@
+<div class="vui-radio">
+  <input
+    [id]="id()"
+    class="native-radio"
+    type="radio"
+    [name]="name()"
+    [value]="value()"
+    [checked]="selected"
+    [disabled]="disabled()"
+    (change)="select()"
+  >
+  @if (label()) {
+    <label [for]="id()">{{ label() }}</label>
+  }
+</div>
