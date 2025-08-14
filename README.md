@@ -2,4 +2,4 @@
 
 ## 📷 Preview
 
-![Vitron UI preview](./demo/example_01.png)
+![Vitron UI preview](./demo/example_001.png)
